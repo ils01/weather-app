@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="content">
+			<!-- <h1 class="title--main">Weather Forecast</h1> -->
+			<div class="location">
+				<label class="location__label" for="location"
+					><h2>choose your location</h2></label
+				>
+				<input
+					class="location__input"
+					type="text"
+					id="location"
+					name="location"
+				/>
+				<button class="button location__btn" id="locationbtn" type="button">
+					get forecast
+				</button>
+				<p class="location__status"></p>
+			</div>
+			<div class="forecast">
+				<div class="forecast-cont">
+					<h2 class="forecast__title"></h2>
+					<ul class="forecast__list">
+						<li class="forecast__item">
+							<span>temp</span>
+							<span class="item__temp temp"></span>
+							<span class="temp__unit"></span>
+						</li>
+						<li class="forecast__item">
+							<span>feels like</span>
+							<span class="item__feels_like feels_like"></span>
+							<span class="temp__unit"></span>
+						</li>
+						<li class="forecast__item">
+							<span>humidity</span>
+							<span class="item__humidity humidity"></span>
+							<span class="humidity__unit">%</span>
+						</li>
+						<li class="forecast__item">
+							<span>wind</span>
+							<span class="item__wind wind"></span>
+							<span class="wind__unit"></span>
+						</li>
+					</ul>
+					<button class="button button--degree"></button>
+					<button class="button button--speed"></button>
+				</div>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+	</body>
+</html>
