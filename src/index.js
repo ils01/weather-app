@@ -1,4 +1,5 @@
-const content = document.getElementById("content");
+import "./style.scss";
+
 const locationInput = document.getElementById("location");
 const locationButton = document.getElementById("locationbtn");
 const locationStatus = document.querySelector(".location__status");
@@ -10,10 +11,12 @@ let currentDegreeUnit = "c";
 let currentSpeedType = "kph";
 
 function getData(location) {
+	locationStatus.textContent = "loading...";
 	fetch(
 		`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&aqi=no`
 	)
 		.then(function(response) {
+			console.log("here");
 			return response.json();
 		})
 		.then(function(data) {
@@ -65,9 +68,9 @@ function setData() {
 	windElement.textContent = currentData[`wind_${currentSpeedType}`];
 	windUnitElement.textContent = currentSpeedType;
 	if (currentDegreeUnit === "f") {
-		degreeButton.textContent = "change to C";
+		degreeButton.textContent = "change to °C";
 	} else {
-		degreeButton.textContent = "change to F";
+		degreeButton.textContent = "change to °F";
 	}
 
 	if (currentSpeedType === "kph") {
