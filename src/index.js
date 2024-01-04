@@ -13,7 +13,7 @@ let currentSpeedType = "kph";
 function getData(location) {
 	locationStatus.textContent = "loading...";
 	fetch(
-		`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&aqi=no`
+		`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&aqi=no`
 	)
 		.then(function(response) {
 			console.log("here");
